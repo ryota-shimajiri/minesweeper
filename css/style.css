@@ -1,0 +1,66 @@
+body {
+    text-align: center;
+}
+
+#h, #w, #b {
+    width: 50px;
+}
+
+#gameField {
+    margin: 0 auto;
+    margin-top: 15px;
+    border-collapse: collapse;
+    background: rgb(50, 174, 205);
+}
+
+td {
+    border: solid 3px white;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px #242424 solid;
+}
+
+.open {
+    background: #f2f1f1;
+    animation: fadein 0.7s;
+}
+
+.flag::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f024";
+}
+
+.bomb {
+    background: red;
+    animation: fadein 1s infinite;
+}
+
+.bomb::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f1e2";
+}
+
+.clear {
+    background: rgb(124, 222, 173);
+}
+
+.clear::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f4d8";
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#result {
+    text-align: center;
+}

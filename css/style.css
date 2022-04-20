@@ -24,7 +24,6 @@ td {
 
 .open {
     background: #f2f1f1;
-    animation: fadein 0.7s;
 }
 
 .flag::before {
@@ -34,7 +33,6 @@ td {
 
 .bomb {
     background: red;
-    animation: fadein 1s infinite;
 }
 
 .bomb::before {
@@ -49,16 +47,6 @@ td {
 .clear::before {
     font-family: "Font Awesome 6 Free";
     content: "\f4d8";
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
 }
 
 #result {

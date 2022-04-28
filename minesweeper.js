@@ -1,7 +1,8 @@
 let data = [];
 let h, w, b, count;
 let startTime;
-let timeoutId;
+let timerId;
+let s = 0;
 
 const bombCount = document.querySelector(".bombCount");
 const gameField = document.getElementById("gameField");
@@ -26,8 +27,8 @@ function start() {
     init();
 
     // タイマー処理
-    startTime = Date.now();
-    timer();
+    clearInterval(timerId);
+    timerId = setInterval("timer()",1000);
 
     for (let i = 0; i < h; i++) {
         // 縦の要素の数だけtrを追加
@@ -49,12 +50,12 @@ function init() {
     h = Number(document.getElementById("h").value);
     b = Number(document.getElementById("b").value);
     data = [];
-    clearTimeout(timeoutId);
+    s = 0;
     gameField.innerHTML = "";
     gameField.style.pointerEvents = "auto";
     count = b;
     bombCount.textContent = count;
-    time.textContent = "000";
+    time.textContent = "0000";
     result.textContent = "";
 }
 
@@ -116,9 +117,9 @@ function leftClicked() {
                 }
             }
         }
+        clearInterval(timerId);
         gameField.style.pointerEvents = "none";
         result.innerHTML = "GAME OVER!!";
-        clearTimeout(timeoutId);
         return;
     }
 
@@ -139,9 +140,9 @@ function leftClicked() {
                 }
             }
         }
+        clearInterval(timerId);
         gameField.style.pointerEvents = "none";
         result.textContent = "CLEAR!!";
-        clearTimeout(timeoutId);
         return;
     }
 }
@@ -226,8 +227,7 @@ function countOpenCell() {
 }
 
 function timer() {
-    const d = new Date(Date.now() - startTime);
-    const s = String(d.getSeconds()).padStart(3, "0");
-    time.textContent = `${s}`;
-    timeoutId = setTimeout(() => { timer(); }, 1000);
+    s++;
+    s = ( '0000' + s ).slice( -4 );
+    time.innerHTML = String(s);
 }

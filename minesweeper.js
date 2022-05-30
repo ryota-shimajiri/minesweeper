@@ -117,7 +117,7 @@ function leftClicked() {
         }
         clearInterval(timerId);
         gameField.style.pointerEvents = "none";
-        result.innerHTML = "GAME OVER!!";
+        setTimeout(() => alert("GAME OVER!!"), 2);
         return;
     }
 

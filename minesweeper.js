@@ -3,12 +3,10 @@ let h, w, b, count;
 let startTime;
 let timerId;
 let s = 0;
-
 const bombCount = document.querySelector(".bombCount");
 const gameField = document.getElementById("gameField");
 const time = document.getElementById("time");
 const result = document.getElementById("result");
-
 const startBtn = document.getElementById("startBtn");
 const beginnerBtn = document.getElementById("beginnerBtn");
 const intermediateBtn = document.getElementById("intermediateBtn");
@@ -142,7 +140,7 @@ function leftClicked() {
         }
         clearInterval(timerId);
         gameField.style.pointerEvents = "none";
-        result.textContent = "CLEAR!!";
+        setTimeout(() => alert("CLEAR!!"), 2);
         return;
     }
 }

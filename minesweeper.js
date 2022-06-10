@@ -20,13 +20,13 @@ advancedBtn.addEventListener("click", setAdvancedDifficulty, "false");
 let carrent = this.textContent
 
 function start() {
-    
+
     // 初期化
     init();
 
     // タイマー処理
     clearInterval(timerId);
-    timerId = setInterval("timer()",1000);
+    timerId = setInterval("timer()", 1000);
 
     for (let i = 0; i < h; i++) {
         // 縦の要素の数だけtrを追加
@@ -226,6 +226,6 @@ function countOpenCell() {
 
 function timer() {
     s++;
-    s = ( '0000' + s ).slice( -4 );
+    s = ('0000' + s).slice(-4);
     time.innerHTML = String(s);
 }

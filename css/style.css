@@ -1,54 +1,70 @@
 body {
-    text-align: center;
+  text-align: center;
 }
 
-#h, #w, #b {
-    width: 50px;
+#h,
+#w,
+#b {
+  width: 50px;
+}
+
+.wrapper {
+  margin: 10px;
+}
+
+.setting-wrapper {
+  margin: 10px;
+  width: 100%;
+}
+
+.field-wrapper {
+  margin: 20px;
+  width: 100%;
 }
 
 #gameField {
-    margin: 0 auto;
-    margin-top: 15px;
-    border-collapse: collapse;
-    background: rgb(50, 174, 205);
+  margin: 0 auto;
+  margin-top: 15px;
+  border-collapse: collapse;
+  background: rgb(50, 174, 205);
 }
 
 td {
-    border: solid 3px white;
-    width: 25px;
-    height: 25px;
-    font-weight: bold;
-    text-align: center;
-    border: 2px #242424 solid;
+  border: solid 3px white;
+  width: 25px;
+  height: 25px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px #242424 solid;
 }
 
 .open {
-    background: #f2f1f1;
+  background: #f2f1f1;
 }
 
 .flag::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f024";
+  font-family: "Font Awesome 6 Free";
+  content: "\f024";
 }
 
 .bomb {
-    background: red;
+  background: red;
 }
 
 .bomb::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f1e2";
+  font-family: "Font Awesome 6 Free";
+  content: "\f1e2";
 }
 
 .clear {
-    background: rgb(124, 222, 173);
+  background: rgb(124, 222, 173);
 }
 
 .clear::before {
-    font-family: "Font Awesome 6 Free";
-    content: "\f4d8";
+  font-family: "Font Awesome 6 Free";
+  content: "\f4d8";
 }
 
 #result {
-    text-align: center;
+  text-align: center;
 }

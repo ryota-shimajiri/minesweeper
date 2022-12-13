@@ -11,17 +11,23 @@
 <body>
   <h1>マインスイーパー</h1>
   <h4>遊び方: 左クリック(タップ)でマスを開く 右クリック(タップ長押し)で旗を立てる</h4>
-  <span>初級：09×09のマスに10個の地雷 </span><button id="beginnerBtn">初級</button><br>
-  <span>中級：16×16のマスに40個の地雷 </span><button id="intermediateBtn">中級</button><br>
-  <span>上級：30×16のマスに99個の地雷 </span><button id="advancedBtn">上級</button><br>
-  <span>W<input type="number" id="w" value="9" min="2" max="30"></span>
-  <span>H<input type="number" id="h" value="9" min="2" max="20"></span>
-  <span>B<input type="number" id="b" value="10" min="1" max="99"></span>
-  <i class="fa-solid fa-land-mine-on"></i> <span class="bombCount">00</span>
-  <button id="startBtn">START</button>
-  <i class="fa-solid fa-stopwatch"></i> <span id="time" class="timer">0000</span>
-  <h3 id="result"></h3>
-  <table id="gameField"></table>
+  <div class="wrapper">
+    <div class="field-wrapper">
+      <span>初級：09×09のマスに10個の地雷 </span><button id="beginnerBtn">初級</button><br>
+      <span>中級：16×16のマスに40個の地雷 </span><button id="intermediateBtn">中級</button><br>
+      <span>上級：30×16のマスに99個の地雷 </span><button id="advancedBtn">上級</button><br>
+      <span>W<input type="number" id="w" value="9" min="2" max="30"></span>
+      <span>H<input type="number" id="h" value="9" min="2" max="20"></span>
+      <span>B<input type="number" id="b" value="10" min="1" max="99"></span>
+    </div>
+    <div class="field-wrapper">
+      残り<i class="fa-solid fa-land-mine-on"></i> <span class="bombCount">00</span>
+      <button id="startBtn">START</button>
+      <i class="fa-solid fa-stopwatch"></i> <span id="time" class="timer">0000</span>
+      <h3 id="result"></h3>
+      <table id="gameField"></table>
+    </div>
+  </div>
 </body>
 <script src="main.js"></script>
 
